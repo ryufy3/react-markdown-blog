@@ -188,3 +188,14 @@
   max-width: var(--max-width);
   margin: 0 auto;
 }
+
+.go__home {
+  padding: 0.5rem 1.2rem;
+  background: var(--font-color);
+  color: var(--bg-color);
+  cursor: pointer;
+  display: inline-flex;
+  align-self: flex-start;
+  border-radius: 0.4rem;
+  font-weight: 600;
+}

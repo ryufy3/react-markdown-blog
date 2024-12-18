@@ -174,7 +174,9 @@ export default function App() {
       <Container props={{ theme, setTheme }}>
         <h1>Not Found</h1>
         <p>Post with slug ({slug}) Not Found!</p>
-        <NavLink to={"/"}>Go Back</NavLink>
+        <NavLink to={"/"} className={Css.go__home}>
+          Go Home
+        </NavLink>
       </Container>
     );
   return (
@@ -232,6 +234,9 @@ export default function App() {
       >
         {post.content}
       </Markdown>
+      <NavLink to={"/"} className={Css.go__home}>
+        Go Home
+      </NavLink>
     </Container>
   );
 }
