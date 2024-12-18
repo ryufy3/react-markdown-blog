@@ -1,0 +1,190 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: var(--card-color);
+  z-index: 10;
+}
+
+.header .wrapper {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.3rem;
+}
+
+.header .wrapper .brand {
+  font-family: var(--logo-font);
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+.header .wrapper .brand::after {
+  content: ".";
+  color: red;
+}
+
+.header .wrapper .themes {
+  position: relative;
+}
+
+.header .wrapper .themes .toggle__themes {
+  border: 1px solid var(--font-color);
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+}
+
+.header .wrapper .themes .toggle__themes:is(:hover, :focus, .active) {
+  color: var(--bg-color);
+  background: var(--font-color);
+}
+
+.header .wrapper .themes .lists {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--card-color);
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  margin-top: 5rem;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header .wrapper .themes .lists.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.header .wrapper .themes .lists .list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-wrap: nowrap;
+  gap: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--font-color);
+  border-radius: 0.3rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.header .wrapper .themes .lists .list:is(:hover, :focus, .active) {
+  color: var(--bg-color);
+  background: var(--font-color);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 7rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  gap: 3rem;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  gap: 3rem;
+}
+.posts .post {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--font-color);
+  border-radius: 0.5rem;
+}
+
+.posts .post .card {
+  width: 100%;
+  padding: 2rem 1.4rem;
+  border: 1px solid var(--font-color);
+  border-radius: 0.7rem;
+}
+
+.posts .post .card .metadata {
+  margin-bottom: 2rem;
+}
+
+.posts .post .card .metadata .date {
+  margin-top: 0.7rem;
+}
+
+.posts .post .card .link {
+  background: var(--font-color);
+  padding: 0.6rem 1.3rem;
+  border-radius: 0.5rem;
+  color: var(--bg-color);
+}
+
+.wrap__code {
+  position: relative;
+  width: 100%;
+  border-radius: 0.7rem;
+}
+
+.wrap__code .head__code {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1.4rem;
+}
+
+.wrap__code .head__code .lang {
+  color: black;
+  font-weight: 600;
+  font-family: var(--system-font);
+}
+
+.wrap__code .head__code .copy__code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.3rem;
+  color: black;
+  border: 1px solid black;
+  padding: 0.3rem 0.6rem;
+  gap: 0.7rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.wrap__code .head__code .copy__code:is(:hover, :focus, .active) {
+  color: white;
+  background: black;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  background: var(--card-color);
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  padding: 0.5rem 0;
+}
+
+.footer p {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
